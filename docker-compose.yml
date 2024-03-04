@@ -2,6 +2,11 @@ version: '3.1'
 
 services:
   app:
-    build: .
+    image: ghcr.io/chaostreff-flensburg/space-jobs:latest
     env_file:
       - .env
+    restart: always
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "1"
