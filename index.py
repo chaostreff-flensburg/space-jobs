@@ -32,7 +32,7 @@ def send_poll_message():
 
 print("Poll bot is running...")
 
-schedule.every().thursday.at("14:00").do(send_poll_message)
+schedule.every().tuesday.at("14:00").do(send_poll_message)
 
 while True:
     schedule.run_pending()
